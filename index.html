@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="GoReview.in helps businesses collect more Google reviews with a QR-based review system, multilingual support, and a premium business profile page." />
+    <title>GoReview.in | Smart Google Review Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-pkGyP1eXbU4j6GON0RLs3iwunQY8akBvY5ZgU+dl7Y/BtSxWzF5XtUl3H6gh0P5O6ZpAXgU1FRmTz8HAwYQfYw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/png" sizes="32x32" href="Image/favicon.png" />
+    <link rel="apple-touch-icon" href="Image/favicon.png" />
+    <meta name="theme-color" content="#001f5b" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container navbar">
+        <a href="#" class="logo">
+          <div class="logo-mark">
+            <img src="Image/logo.png" alt="GoReview logo" />
+          </div>
+          <div class="logo-text">
+            <strong>GoReview.in</strong>
+            <span>Smart Google Review Solutions</span>
+          </div>
+        </a>
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="#how-it-works">How it Works</a>
+          <a href="#languages">Languages</a>
+          <a href="#features">Features</a>
+          <a href="#demo">Live Demo</a>
+        </nav>
+        <div class="nav-actions">
+          <a href="#contact" class="button button-primary">Request Demo</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy fade-in">
+            <span class="eyebrow">Premium Review Growth</span>
+            <h1>Get More Google Reviews. Effortlessly.</h1>
+            <p>Help your customers leave professional Google reviews in just 4 simple steps with a modern QR-based workflow designed for growth.</p>
+            <div class="hero-actions">
+              <a href="#contact" class="button button-primary">Request Demo</a>
+              <a href="#" class="button button-secondary" onclick="openVideoModal(event)">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M5 3v18l15-9L5 3z" fill="#071E3A"/></svg>
+                Watch Demo
+              </a>
+            </div>
+            <div class="hero-stats">
+              <div class="stat-card">
+                <strong>5000+</strong>
+                <span>Reviews Generated</span>
+              </div>
+              <div class="stat-card">
+                <strong>100+</strong>
+                <span>Businesses Served</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero-visual scale-up">
+            <div class="visual-card">
+              <!-- <img src="Image/google_review.png" alt="GoReview demo" class="hero-illustration" style="width:100%;border-radius:18px;margin-bottom:1rem;object-fit:cover;" /> -->
+              <div class="phone-frame" aria-hidden="true">
+                <div class="phone-header">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <div class="phone-screen">
+                  <div class="flow-step">
+                    <div class="badge"><img src="Image/qrcode.png" alt="QR" class="badge-img" /></div>
+                    <strong>QR Scan</strong>
+                    <small>Customers scan your dedicated review code.</small>
+                  </div>
+                  <div class="flow-step">
+                    <div class="badge"><img src="Image/language.png" alt="Language" class="badge-img" /></div>
+                    <strong>Select Language</strong>
+                    <small>Choose English, Hindi, or Gujarati.</small>
+                  </div>
+                  <div class="flow-step">
+                    <div class="badge"><img src="Image/copy.png" alt="Copy" class="badge-img" /></div>
+                    <strong>Copy Review</strong>
+                    <small>AI-generated review is ready instantly.</small>
+                  </div>
+                  <div class="flow-step">
+                    <div class="badge"><img src="Image/review.png" alt="Google" class="badge-img" /></div>
+                    <strong>Submit Review</strong>
+                    <small>Paste it directly into Google Reviews.</small>
+                  </div>
+                </div>
+              </div>
+              <div class="floating-chip"></div>
+                <!-- external decorative image removed due to 404; use local hero-mockup or background shapes instead -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="trust section-compact" aria-label="Trust metrics">
+        <div class="container fade-in">
+          <div class="trust-grid">
+            <div class="trust-card">
+              <strong>5000+</strong>
+              <span>Reviews Generated</span>
+            </div>
+            <div class="trust-card">
+              <strong>100+</strong>
+              <span>Businesses Served</span>
+            </div>
+            <div class="trust-card">
+              <strong>3</strong>
+              <span>Languages Supported</span>
+            </div>
+            <div class="trust-card">
+              <strong>4 Steps</strong>
+              <span>Review Process</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="how-it-works">
+        <div class="container">
+          <div class="fade-in">
+            <div class="eyebrow">How it Works</div>
+            <h2 class="section-title" style="margin-top: 0.5rem;">A premium, guided review workflow in four moments.</h2>
+            <p style="max-width: 720px; color: var(--muted);">Create an elegant experience for customers, removing friction and making Google Reviews fast, consistent, and multilingual.</p>
+          </div>
+          <div class="steps" style="margin-top: 2.5rem; display: grid; gap: 1.5rem;">
+            <div class="step-card fade-in">
+              <div class="icon"><img src="Image/qrcode.png" alt="QR" class="step-icon" /></div>
+              <h3>Step 1: Scan QR Code</h3>
+              <p>Customer scans your business QR code to open the review flow instantly.</p>
+            </div>
+            <div class="step-card fade-in">
+              <div class="icon"><img src="Image/language.png" alt="Language" class="step-icon" /></div>
+              <h3>Step 2: Select Language</h3>
+              <p>Options include English, Hindi (Hinglish), and Gujarati (Gujlish) for every audience.</p>
+            </div>
+            <div class="step-card fade-in">
+              <div class="icon"><img src="Image/copy.png" alt="Copy" class="step-icon" /></div>
+              <h3>Step 3: Copy Review</h3>
+              <p>AI-generated review appears instantly and is ready to copy with one tap.</p>
+            </div>
+            <div class="step-card fade-in">
+              <div class="icon"><img src="Image/review.png" alt="Google" class="step-icon" /></div>
+              <h3>Step 4: Submit Review</h3>
+              <p>Customer pastes the professional review directly into Google in seconds.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="languages" class="section-compact">
+        <div class="container">
+          <div class="fade-in">
+            <div class="eyebrow">Multi Language Reviews</div>
+            <h2 class="section-title" style="margin-top: 0.5rem;">Deliver review messages that feel local and authentic.</h2>
+          </div>
+          <div class="language-grid" style="margin-top: 2rem;">
+            <article class="language-card fade-in">
+              <div class="language-icon"><span class="language-pill">EN</span><strong>English</strong></div>
+              <p>“Excellent service and professional support. Highly recommended.”</p>
+            </article>
+            <article class="language-card fade-in">
+              <div class="language-icon"><span class="language-pill">HI</span><strong>Hindi (Hinglish)</strong></div>
+              <p>“Bahut achhi service mili. Team ka support bhi bahut accha tha.”</p>
+            </article>
+            <article class="language-card fade-in">
+              <div class="language-icon"><span class="language-pill">GU</span><strong>Gujarati (Gujlish)</strong></div>
+              <p>“Service khub sari mali. Team no support pan khub saras hato.”</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="features">
+        <div class="container">
+          <div class="feature-block fade-in">
+            <div>
+              <div class="eyebrow">Business Profile Feature</div>
+              <h2 class="section-title" style="margin-top: 0.5rem;">Digital Business Profile Included</h2>
+              <p style="max-width: 620px; color: var(--muted);">Every customer gets access to a complete digital business profile with contact actions, reviews, social channels, and product details.</p>
+              <div class="profile-card scale-up">
+                <div class="profile-card-top">
+                  <div class="profile-card-logo">
+                    <img src="Image/logo.png" alt="GoReview logo" />
+                  </div>
+                  <div class="profile-card-copy">
+                    <strong>GoReview - Smart Review Growth</strong>
+                    <span>Premium review workflows, QR capture, and profile links built for modern businesses.</span>
+                    <p>GoReview helps your customers leave authentic Google reviews quickly, with multilingual support and one shared link for every contact channel.</p>
+                  </div>
+                </div>
+                <div class="profile-card-links">
+                  <p>Thanks for visiting GoReview! Connect with us, share your experience, and stay updated.</p>
+                  <div class="profile-links-grid">
+                    <a href="#"><img src="Image/call.png" alt="Call" />Call</a>
+                    <a href="#"><img src="Image/whatsapp.png" alt="WhatsApp" />WhatsApp</a>
+                    <a href="#"><img src="Image/email.png" alt="Email" />Email</a>
+                    <a href="#"><img src="Image/website.png" alt="Website" />Website</a>
+                    <a href="#"><img src="Image/instagram.png" alt="Instagram" />Instagram</a>
+                    <a href="#"><img src="Image/linkdin.png" alt="LinkedIn" />LinkedIn</a>
+                    <a href="#"><img src="Image/facebook.png" alt="Facebook" />Facebook</a>
+                    <a href="#"><img src="Image/youtube.png" alt="YouTube" />YouTube</a>
+                    <a href="#"><img src="Image/review.png" alt="Google Review" />Google Review</a>
+                    <a href="#"><img src="Image/catalog.png" alt="Product Catalog" />Catalog</a>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-compact">
+        <div class="container fade-in">
+          <div class="eyebrow">Why Choose GoReview</div>
+          <h2 class="section-title" style="margin-top: 0.5rem;">Everything you need to collect thoughtful, native reviews.</h2>
+          <div class="feature-grid" style="margin-top: 2rem;">
+            <article class="feature-card scale-up"><img src="Image/qrcode.png" alt="QR" class="feature-icon" /><div><h4>QR Based Review Collection</h4></div></article>
+            <article class="feature-card scale-up"><img src="Image/human_like.png" alt="Human-like" class="feature-icon" /><div><h4>Natural Human-like Reviews</h4></div></article>
+            <article class="feature-card scale-up"><img src="Image/language.png" alt="Language" class="feature-icon" /><div><h4>Multi Language Support</h4></div></article>
+            <article class="feature-card scale-up"><img src="Image/no_app.png" alt="No App" class="feature-icon" /><div><h4>No App Required</h4></div></article>
+            <article class="feature-card scale-up"><img src="Image/profile.png" alt="Profile" class="feature-icon" /><div><h4>Business Profile Page</h4></div></article>
+            <article class="feature-card scale-up"><img src="Image/social.png" alt="Social" class="feature-icon" /><div><h4>Social Media Integration</h4></div></article>
+            <article class="feature-card scale-up"><img src="Image/fast.png" alt="Fast" class="feature-icon" /><div><h4>Fast Setup</h4></div></article>
+            <article class="feature-card scale-up"><img src="Image/mobile.png" alt="Mobile" class="feature-icon" /><div><h4>Mobile Friendly</h4></div></article>
+            <article class="feature-card scale-up"><img src="Image/branding.png" alt="Branding" class="feature-icon" /><div><h4>Custom Branding</h4></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-compact">
+        <div class="container fade-in">
+          <div class="eyebrow">Industries We Serve</div>
+          <h2 class="section-title" style="margin-top: 0.5rem;">Designed for businesses across every sector.</h2>
+          <div class="industry-grid" style="margin-top: 2rem;">
+            <div class="industry-card">Restaurants</div>
+            <div class="industry-card">Hotels</div>
+            <div class="industry-card">Hospitals</div>
+            <div class="industry-card">Clinics</div>
+            <div class="industry-card">Schools</div>
+            <div class="industry-card">Colleges</div>
+            <div class="industry-card">Retail Shops</div>
+            <div class="industry-card">Manufacturer</div>
+            <div class="industry-card">All Businesses</div>
+            <div class="industry-card">Professional Services</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-compact">
+        <div class="container">
+          <div class="fade-in">
+            <div class="eyebrow">Testimonials</div>
+            <h2 class="section-title" style="margin-top: 0.5rem;">Real businesses love how easy GoReview is.</h2>
+          </div>
+          <div class="testimonials" style="margin-top: 2rem;">
+            <article class="testimonial-card scale-up">
+              <div class="testimonial-header">
+                <div class="testimonial-avatar">A</div>
+                <div><span>Arun's Cafe</span><small style="color: var(--muted);">Cafe Owner</small></div>
+              </div>
+              <div class="star-row">★★★★★</div>
+              <p>“GoReview made collecting quality Google reviews effortless. Our customers love the language options and our ranking improved within days.”</p>
+            </article>
+            <article class="testimonial-card scale-up">
+              <div class="testimonial-header">
+                <div class="testimonial-avatar">H</div>
+                <div><span>Hotel Sunrise</span><small style="color: var(--muted);">Hospitality Lead</small></div>
+              </div>
+              <div class="star-row">★★★★★</div>
+              <p>“The QR workflow is seamless, and the generated reviews feel authentic. It’s a very polished system for modern businesses.”</p>
+            </article>
+            <article class="testimonial-card scale-up">
+              <div class="testimonial-header">
+                <div class="testimonial-avatar">D</div>
+                <div><span>Dr. Desai Clinic</span><small style="color: var(--muted);">Clinic Manager</small></div>
+              </div>
+              <div class="star-row">★★★★★</div>
+              <p>“Our patients can now leave detailed reviews quickly in Gujarati or Hindi, which has helped build trust and visibility online.”</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="section-compact">
+        <div class="container fade-in">
+          <div class="eyebrow">FAQ</div>
+          <h2 class="section-title" style="margin-top: 0.5rem;">Answers to the questions you ask most.</h2>
+          <div class="accordion" style="margin-top: 2rem;">
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Does customer need an app?</button>
+              <div class="faq-answer"><p>No app is required. Customers open the review workflow directly through a QR code and can submit from their browser.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Can reviews be generated in Gujarati?</button>
+              <div class="faq-answer"><p>Yes. GoReview supports Gujarati (Gujlish), Hindi (Hinglish), and English to match your customers’ preferences.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Can I add social media links?</button>
+              <div class="faq-answer"><p>Absolutely. Your digital business profile can include WhatsApp, Instagram, LinkedIn, Facebook, YouTube, and web links.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Will reviews look natural?</button>
+              <div class="faq-answer"><p>Yes. The review engine creates natural, human-like messages that are polished and appropriate for your audience.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Can I customize branding?</button>
+              <div class="faq-answer"><p>Yes. You can update business details, colors, and messages on your profile page to match your brand identity.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How quickly can setup be completed?</button>
+              <div class="faq-answer"><p>Most businesses are live within a few hours, with QR codes and profile pages fully configured in one session.</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" style="background: linear-gradient(180deg, #f0f4f9, #e8eff7);  padding: 4rem 0;">
+        <div class="container contact-panel fade-in">
+          <div class="contact-copy">
+            <span class="eyebrow" style="color: #FF8A00;">Get Started</span>
+            <h2 class="section-title" style="color: #071E3A;">Ready To Grow Your Google Reviews?</h2>
+            <p style="color: #475569;">Start with a premium review workflow, a branded profile landing page, and fast customer review capture.</p>
+            <div class="contact-actions">
+              <a href="https://wa.me/919274524204" class="button button-primary" style="font-weight: 700; font-size: 1.2rem;"> Contact Us</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="videoModal" class="video-modal">
+      <div class="video-modal-content">
+        <button class="video-modal-close" onclick="closeVideoModal()">&times;</button>
+        <div class="video-container">
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/7JZF7rVrOdw" title="GoReview Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-brand-section">
+          <div class="footer-logo-wrap">
+            <img src="Image/logo.png" alt="GoReview logo" class="footer-logo" />
+          </div>
+          <div class="footer-brand-text">
+            <strong>GoReview.in</strong>
+            <p>Smart Google Review Solutions built for modern businesses with premium review workflows.</p>
+          </div>
+        </div>
+        <div class="footer-links">
+          <a href="#">Home</a>
+          <a href="#features">Features</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        © 2026 GoReview.in — Smart Google Review Solutions
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
