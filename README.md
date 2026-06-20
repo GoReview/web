@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # GoReview.in - Smart Google Review Solutions
 
 Welcome to **GoReview.in** – A modern, responsive web application designed to help businesses collect more Google reviews effortlessly with a QR-based review system.
@@ -169,3 +170,7 @@ Future enhancements planned:
 **Made with ❤️ by the GoReview team**
 
 For more information, visit [https://github.com/GoReview/web](https://github.com/GoReview/web)
+=======
+# web
+GoReview.in | Smart Google Review Solutions - QR Based Review Collection, Multi-Language Reviews, Business Profile Pages and Social Media Integration.
+>>>>>>> 5e6000b1303eb31c778e3528a7d5ccfd0570699c
