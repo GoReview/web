@@ -112,7 +112,7 @@ async function copyAndOpen(){
   window.open(config.googleReviewUrl, '_blank');
 }
 
-function contactAction(){ window.open('contact.html', '_blank'); }
+function contactAction(){ window.open(config.contactPageUrl || 'contact/', '_blank'); }
 
 document.addEventListener('DOMContentLoaded', async ()=>{
   await loadConfig();

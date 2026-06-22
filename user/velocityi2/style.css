@@ -24,7 +24,7 @@ textarea.review-text{width:100%;min-height:180px;padding:1rem;border-radius:14px
 
 .contact-card{background:#0f172a;color:#fff;border-radius:18px;padding:1.2rem;margin-bottom:1rem;box-shadow:0 10px 25px rgba(32,56,97,0.12)}
 .contact-header{display:flex;gap:1rem;align-items:center;margin-bottom:1rem}
-.contact-logo{width:72px;height:72px;object-fit:contain;border-radius:18px;background:#fff;padding:0.75rem}
+.contact-logo{width:72px;height:72px;object-fit:contain;border-radius:18px;background:#fff;padding:0.25rem}
 .contact-info strong{display:block;font-size:1.2rem;margin-bottom:0.25rem}
 .contact-info p{margin:0;color:rgba(255,255,255,0.85);line-height:1.5}
 .contact-card p#contactAddress{margin-top:0.75rem;opacity:0.9}

@@ -5,6 +5,8 @@
   "placeId": "ChIJ58gXCVSHXjkRE3moJOtVLHY",
   "googleReviewUrl": "https://search.google.com/local/writereview?placeid=ChIJ58gXCVSHXjkRE3moJOtVLHY",
   "contactUrl": "https://wa.me/919274524204",
+  "pageUrl": "../",
+  "contactPageUrl": "contact/",
   "address": "SF/3, Shivam Complex, nr. Rajhans cinema, New India Colony, Nikol, Ahmedabad, Gujarat-380049",
   "contactNote": "Thanks for visiting Velocity! Connect with us, share your experience, and stay updated with every option below.",
   "contactLinks": [
@@ -16,6 +18,6 @@
     { "label": "LinkedIn", "icon": "linkdin.png", "url": "https://linkedin.com/company/velocityi2" },
     { "label": "YouTube", "icon": "youtube.png", "url": "https://youtube.com/velocityi2" },
     { "label": "Catalog", "icon": "catalog.png", "url": "https://velocityi2.com/catalog" },
-    { "label": "Review", "icon": "review.png", "url": "index.html" }
+    { "label": "Review", "icon": "review.png", "url": "../" }
   ]
 }
