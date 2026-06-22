@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Velocity Contact</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="review-panel contact-panel">
+        <div class="contact-card">
+          <div class="contact-header">
+            <img id="contactLogo" class="contact-logo" src="vi2.png" alt="Business logo" />
+            <div class="contact-info">
+              <strong id="contactBusinessName">Velocity - igniting Innovation</strong>
+              <p id="contactBusinessTag">IOT & Embedded Systems Development</p>
+            </div>
+          </div>
+          <p id="contactAddress">SF/3, Shivam Complex, nr. Rajhans cinema, New India Colony, Nikol, Ahmedabad, Gujarat-380049</p>
+        </div>
+
+        <div id="contactNote" class="contact-note">Thanks for visiting! Connect with us, share your experience, and stay updated.</div>
+
+        <div id="contactGrid" class="contact-grid"></div>
+      </div>
+    </main>
+
+    <script>
+      const contactConfig = {
+        businessName: 'Velocity - igniting Innovation',
+        businessTag: 'IOT & Embedded Systems Development',
+        logo: 'vi2.png',
+        address: 'SF/3, Shivam Complex, nr. Rajhans cinema, New India Colony, Nikol, Ahmedabad, Gujarat-380049',
+        contactNote: 'Thanks for visiting! Connect with us and stay updated.',
+        links: [
+          { label: 'Call', icon: 'call.png', url: 'tel:+919999999999' },
+          { label: 'WhatsApp', icon: 'whatsapp.png', url: 'https://wa.me/919999999999' },
+          { label: 'Email', icon: 'email.png', url: 'info.goreview.in@gmail.com' },
+          { label: 'Website', icon: 'website.png', url: 'https://goreview.in' },
+          { label: 'Instagram', icon: 'instagram.png', url: 'https://instagram.com/' },
+          { label: 'LinkedIn', icon: 'linkdin.png', url: 'https://linkedin.com/' },
+          { label: 'YouTube', icon: 'youtube.png', url: 'https://youtube.com/' },
+          { label: 'Catalog', icon: 'catalog.png', url: 'https://velocityi2.com/' },
+          { label: 'Review', icon: 'review.png', url: 'index.html' }
+        ]
+      };
+
+      async function loadContactConfig() {
+        try {
+          const res = await fetch('config.json');
+          if (res.ok) {
+            const cfg = await res.json();
+            if (cfg.businessName) contactConfig.businessName = cfg.businessName;
+            if (cfg.businessTag) contactConfig.businessTag = cfg.businessTag;
+            if (cfg.address) contactConfig.address = cfg.address;
+            if (cfg.contactNote) contactConfig.contactNote = cfg.contactNote;
+            if (Array.isArray(cfg.contactLinks)) contactConfig.links = cfg.contactLinks;
+          }
+        } catch (e) {
+          console.warn('Unable to load contact config', e);
+        }
+
+        document.getElementById('contactBusinessName').textContent = contactConfig.businessName;
+        document.getElementById('contactBusinessTag').textContent = contactConfig.businessTag;
+        document.getElementById('contactAddress').textContent = contactConfig.address;
+        document.getElementById('contactNote').textContent = contactConfig.contactNote;
+        document.getElementById('contactLogo').src = contactConfig.logo;
+
+        const grid = document.getElementById('contactGrid');
+        grid.innerHTML = '';
+        contactConfig.links.forEach(link => {
+          const a = document.createElement('a');
+          a.className = 'contact-link';
+          a.href = link.url;
+          
+          if (link.label === 'Review') {
+            a.onclick = (e) => {
+              e.preventDefault();
+              window.location.href = link.url;
+            };
+          } else {
+            a.target = '_blank';
+            a.rel = 'noreferrer noopener';
+          }
+
+          const iconName = link.icon || '';
+          if (iconName) {
+            const img = document.createElement('img');
+            img.className = 'contact-link-icon';
+            if (iconName.match(/\.(png|jpe?g|svg|webp)$/i)) {
+              img.src = iconName.startsWith('http') || iconName.startsWith('data:')
+                ? iconName
+                : iconName.startsWith('/')
+                ? iconName
+                : `../../Image/${iconName}`;
+              img.alt = link.label;
+              a.appendChild(img);
+            } else {
+              const emoji = document.createElement('div');
+              emoji.className = 'contact-link-emoji';
+              emoji.textContent = iconName;
+              a.appendChild(emoji);
+            }
+          }
+
+          const label = document.createElement('span');
+          label.textContent = link.label;
+          a.appendChild(label);
+          grid.appendChild(a);
+        });
+      }
+
+      document.addEventListener('DOMContentLoaded', loadContactConfig);
+    </script>
+  </body>
+</html>

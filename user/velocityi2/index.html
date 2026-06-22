@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Velocity - Review Generator (Template)</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="review-panel">
+        <div class="brand">
+          <img id="brandLogo" src="logo.png" alt="Logo" />
+          <div>
+            <strong id="businessName">Velocity - Igniting Innovation</strong>
+            <div id="businessTag">PCB Design, Hardware & Product Development</div>
+          </div>
+        </div>
+
+        <div class="topic-section">
+          <div class="topic-label">Review Topic</div>
+          <div id="topicButtons" class="topic-buttons" role="tablist" aria-label="Review Topics"></div>
+        </div>
+
+        <div class="language-section">
+          <div class="language-label">Language</div>
+          <div id="languageButtons" class="language-buttons" role="tablist" aria-label="Language selection"></div>
+        </div>
+
+        <label for="reviewText"><strong>Generated Review</strong></label>
+        <textarea id="reviewText" class="review-text" readonly>Click "Generate New Review" to create a review.</textarea>
+
+        <div class="buttons">
+          <button id="generateBtn" class="btn primary">Generate New Review</button>
+          <button id="copyOpenBtn" class="btn">Copy & Open Google Review</button>
+          <button id="contactBtn" class="btn">Contact Us</button>
+        </div>
+      </div>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

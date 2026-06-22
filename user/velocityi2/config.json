@@ -1,0 +1,21 @@
+{
+  "businessName": "Velocity - Igniting Innovation",
+  "businessTag": "PCB Design, Hardware & Product Development",
+  "logo": "vi2.png",
+  "placeId": "ChIJ58gXCVSHXjkRE3moJOtVLHY",
+  "googleReviewUrl": "https://search.google.com/local/writereview?placeid=ChIJ58gXCVSHXjkRE3moJOtVLHY",
+  "contactUrl": "https://wa.me/919274524204",
+  "address": "SF/3, Shivam Complex, nr. Rajhans cinema, New India Colony, Nikol, Ahmedabad, Gujarat-380049",
+  "contactNote": "Thanks for visiting Velocity! Connect with us, share your experience, and stay updated with every option below.",
+  "contactLinks": [
+    { "label": "Call", "icon": "call.png", "url": "tel:+919999999999" },
+    { "label": "WhatsApp", "icon": "whatsapp.png", "url": "https://wa.me/919274524204" },
+    { "label": "Email", "icon": "email.png", "url": "mailto:hello@velocityi2.com" },
+    { "label": "Website", "icon": "website.png", "url": "https://velocityi2.com" },
+    { "label": "Instagram", "icon": "instagram.png", "url": "https://instagram.com/velocityi2" },
+    { "label": "LinkedIn", "icon": "linkdin.png", "url": "https://linkedin.com/company/velocityi2" },
+    { "label": "YouTube", "icon": "youtube.png", "url": "https://youtube.com/velocityi2" },
+    { "label": "Catalog", "icon": "catalog.png", "url": "https://velocityi2.com/catalog" },
+    { "label": "Review", "icon": "review.png", "url": "index.html" }
+  ]
+}
