@@ -6,10 +6,24 @@
     <title>Velocity Contact</title>
     <link rel="icon" type="image/png" sizes="32x32" href="../../../Image/favicon.png" />
     <link rel="apple-touch-icon" href="../../../Image/favicon.png" />
-    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../../style.css" />
   </head>
   <body>
     <main>
+      <div id="expiryPanel" class="expiry-panel hidden">
+        <div class="expiry-card">
+          <div class="expiry-header">
+            <img src="../../../Image/logo.png" alt="GoReview logo" />
+          </div>
+          <img class="expiry-illustration" src="../../../Image/exp.png" alt="Expired illustration" />
+          <h1>Your plan has expired</h1>
+          <p>Renew your subscription to continue ready-to-use Google review suggestions and help your customers leave reviews faster.</p>
+          <div class="expiry-actions">
+            <a id="expiryPrimaryAction" class="primary" href="#">Renew Your Plan</a>
+            <a id="expirySecondaryAction" class="secondary" href="#">Contact Support</a>
+          </div>
+        </div>
+      </div>
       <div class="review-panel contact-panel">
         <div class="contact-card">
           <div class="contact-header">
@@ -28,94 +42,6 @@
       </div>
     </main>
 
-    <script>
-      const contactConfig = {
-        businessName: 'Velocity - igniting Innovation',
-        businessTag: 'IOT & Embedded Systems Development',
-        logo: '../vi2.png',
-        address: 'SF/3, Shivam Complex, nr. Rajhans cinema, New India Colony, Nikol, Ahmedabad, Gujarat-380049',
-        contactNote: 'Thanks for visiting! Connect with us and stay updated.',
-        reviewPageUrl: '../',
-        links: [
-          { label: 'Call', icon: 'call.png', url: 'tel:+919999999999' },
-          { label: 'WhatsApp', icon: 'whatsapp.png', url: 'https://wa.me/919999999999' },
-          { label: 'Email', icon: 'email.png', url: 'mailto:info.goreview.in@gmail.com' },
-          { label: 'Website', icon: 'website.png', url: 'https://goreview.in' },
-          { label: 'Instagram', icon: 'instagram.png', url: 'https://instagram.com/' },
-          { label: 'LinkedIn', icon: 'linkdin.png', url: 'https://linkedin.com/' },
-          { label: 'YouTube', icon: 'youtube.png', url: 'https://youtube.com/' },
-          { label: 'Catalog', icon: 'catalog.png', url: 'https://velocityi2.com/' },
-          { label: 'Review', icon: 'review.png', url: '../' }
-        ]
-      };
-
-      async function loadContactConfig() {
-        try {
-          const response = await fetch('../config.json');
-          if (response.ok) {
-            const cfg = await response.json();
-            if (cfg.businessName) contactConfig.businessName = cfg.businessName;
-            if (cfg.businessTag) contactConfig.businessTag = cfg.businessTag;
-            if (cfg.address) contactConfig.address = cfg.address;
-            if (cfg.contactNote) contactConfig.contactNote = cfg.contactNote;
-            if (cfg.pageUrl) contactConfig.reviewPageUrl = cfg.pageUrl;
-            if (cfg.contactPageUrl) contactConfig.contactPageUrl = cfg.contactPageUrl;
-            if (Array.isArray(cfg.contactLinks)) contactConfig.links = cfg.contactLinks;
-          }
-        } catch (e) {
-          console.warn('Unable to load contact config', e);
-        }
-
-        document.getElementById('contactBusinessName').textContent = contactConfig.businessName;
-        document.getElementById('contactBusinessTag').textContent = contactConfig.businessTag;
-        document.getElementById('contactAddress').textContent = contactConfig.address;
-        document.getElementById('contactNote').textContent = contactConfig.contactNote;
-        document.getElementById('contactLogo').src = contactConfig.logo;
-
-        const grid = document.getElementById('contactGrid');
-        grid.innerHTML = '';
-
-        contactConfig.links.forEach(link => {
-          const a = document.createElement('a');
-          a.className = 'contact-link';
-          const resolvedUrl = link.label === 'Review' ? (contactConfig.reviewPageUrl || link.url) : link.url;
-          a.href = resolvedUrl;
-
-          if (link.label === 'Review') {
-            a.target = '_self';
-          } else {
-            a.target = '_blank';
-            a.rel = 'noreferrer noopener';
-          }
-
-          const iconName = link.icon || '';
-          if (iconName) {
-            const img = document.createElement('img');
-            img.className = 'contact-link-icon';
-            if (iconName.match(/\.(png|jpe?g|svg|webp)$/i)) {
-              img.src = iconName.startsWith('http') || iconName.startsWith('data:')
-                ? iconName
-                : iconName.startsWith('/')
-                ? iconName
-                : `../../../Image/${iconName}`;
-              img.alt = link.label;
-              a.appendChild(img);
-            } else {
-              const emoji = document.createElement('div');
-              emoji.className = 'contact-link-emoji';
-              emoji.textContent = iconName;
-              a.appendChild(emoji);
-            }
-          }
-
-          const label = document.createElement('span');
-          label.textContent = link.label;
-          a.appendChild(label);
-          grid.appendChild(a);
-        });
-      }
-
-      document.addEventListener('DOMContentLoaded', loadContactConfig);
-    </script>
+    <script src="../../app.js"></script>
   </body>
 </html>

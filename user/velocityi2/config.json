@@ -7,8 +7,19 @@
   "contactUrl": "https://wa.me/919274524204",
   "pageUrl": "../",
   "contactPageUrl": "contact/",
+  "startDate": "2-6-2026",
+  "expiryDate": "26-6-2026",
   "address": "SF/3, Shivam Complex, nr. Rajhans cinema, New India Colony, Nikol, Ahmedabad, Gujarat-380049",
   "contactNote": "Thanks for visiting Velocity! Connect with us, share your experience, and stay updated with every option below.",
+  "topics": ["PCB Design", "Hardware Design", "Firmware", "Product Development", "Product Purchase"],
+  "selectedTopic": "PCB Design",
+  "languages": ["English", "Gujarati", "Hindi"],
+  "selectedLanguage": "English",
+  "noReviewsMessage": {
+    "English": "All reviews have been used! Please connect with admin team to start fresh.",
+    "Gujarati": "Badha reviews use thayi gayu che! Navi shruuat karvani mate admin team ne sampark karo.",
+    "Hindi": "Sabhi reviews use ho gaye hain! Naye shuruat ke liye admin team se contact karen."
+  },
   "contactLinks": [
     { "label": "Call", "icon": "call.png", "url": "tel:+919999999999" },
     { "label": "WhatsApp", "icon": "whatsapp.png", "url": "https://wa.me/919274524204" },

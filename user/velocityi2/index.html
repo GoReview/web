@@ -6,10 +6,24 @@
     <title>Velocity - Review Generator (Template)</title>
     <link rel="icon" type="image/png" sizes="32x32" href="../../Image/favicon.png" />
     <link rel="apple-touch-icon" href="../../Image/favicon.png" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
     <main>
+      <div id="expiryPanel" class="expiry-panel hidden">
+        <div class="expiry-card">
+          <div class="expiry-header">
+            <img src="../../Image/logo.png" alt="GoReview logo" />
+          </div>
+          <img class="expiry-illustration" src="../../Image/exp.png" alt="Expired illustration" />
+          <h1>Your plan has expired</h1>
+          <p>Renew your subscription to continue ready-to-use Google review suggestions and help your customers leave reviews faster.</p>
+          <div class="expiry-actions">
+            <a id="expiryPrimaryAction" class="primary" href="#">Renew Your Plan</a>
+            <a id="expirySecondaryAction" class="secondary" href="#">Contact Support</a>
+          </div>
+        </div>
+      </div>
       <div class="review-panel">
         <div class="brand">
           <img id="brandLogo" src="logo.png" alt="Logo" />
@@ -40,6 +54,6 @@
       </div>
     </main>
 
-    <script src="app.js"></script>
+    <script src="../app.js"></script>
   </body>
 </html>
