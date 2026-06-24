@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Reset Reviews</title>
+  <style>
+    body { 
+      font-family: Arial, sans-serif; 
+      background: #f0f0f0; 
+      padding: 20px; 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .container { 
+      max-width: 400px; 
+      background: white; 
+      padding: 30px; 
+      border-radius: 10px; 
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+      text-align: center;
+    }
+    h1 { color: #333; margin-bottom: 20px; font-size: 24px; }
+    p { color: #666; margin-bottom: 15px; line-height: 1.6; }
+    .status { font-size: 13px; color: #999; margin-top: 20px; }
+    .success { color: #27ae60; font-weight: bold; }
+    .error { color: #e74c3c; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🔐 Admin Reset</h1>
+    <p id="message">Please wait...</p>
+    <p class="status" id="status"></p>
+  </div>
+
+  <script>
+    const ADMIN_PASSWORD = 'admin@123'; // Change this password!
+    
+    function resetReviews() {
+      // Extract user folder from path
+      const pathParts = window.location.pathname.split('/').filter(p => p);
+      const userFolderIndex = pathParts.indexOf('user');
+      const userFolder = userFolderIndex >= 0 && pathParts[userFolderIndex + 1] ? pathParts[userFolderIndex + 1] : 'unknown';
+      
+      // Ask for password
+      const password = prompt('🔐 Enter Admin Password to reset reviews:', '');
+      
+      if (password === null) {
+        document.getElementById('message').textContent = '❌ Reset cancelled';
+        return;
+      }
+      
+      if (password !== ADMIN_PASSWORD) {
+        document.getElementById('message').innerHTML = '<span class="error">❌ Incorrect password!</span>';
+        return;
+      }
+      
+      if (!confirm(`⚠️ Reset all reviews for "${userFolder}"?\n\nThis will clear review tracking from this browser.`)) {
+        document.getElementById('message').textContent = '❌ Reset cancelled';
+        return;
+      }
+      
+      // Clear localStorage for this user
+      localStorage.removeItem(`usedReviews_${userFolder}`);
+      
+      document.getElementById('message').innerHTML = '<span class="success">✅ Reviews reset successfully!</span>';
+      document.getElementById('status').textContent = 'Redirecting to review page in 2 seconds...';
+      
+      // Redirect back to review page
+      setTimeout(() => {
+        window.location.href = '../';
+      }, 2000);
+    }
+    
+    // Auto-trigger on load
+    window.onload = resetReviews;
+  </script>
+</body>
+</html>

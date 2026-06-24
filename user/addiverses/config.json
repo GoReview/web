@@ -1,0 +1,32 @@
+{
+  "businessName": "Addiverses",
+  "businessTag": "3D Printing Services – Custom Prototyping & Manufacturing",
+  "logo": "addiverses.png",
+  "placeId": "ChIJ_zUEjpeHXjkRI-IHitHP1tU",
+  "googleReviewUrl": "https://search.google.com/local/writereview?placeid=ChIJ_zUEjpeHXjkRI-IHitHP1tU",
+  "contactUrl": "https://wa.me/919274251298",
+  "pageUrl": "../",
+  "contactPageUrl": "contact/",
+  "startDate": "24-6-2026",
+  "expiryDate": "27-7-2026",
+  "address": "Hilltown landmark, 403, opp. Das Khaman, near Nikol Gam Road, Nicol Gam, Nikol, Ahmedabad, Gujarat 382350",
+  "contactNote": "Thanks for visiting addiverses! Connect with us, share your experience, and stay updated with every option below.",
+  "topics": ["3D Printing", "3D Prototype", "Production"],
+  "selectedTopic": "3D Printing",
+  "languages": ["English"],
+  "selectedLanguage": "English",
+  "noReviewsMessage": {
+    "English": "All reviews have been used! Please connect with admin team to start fresh.",
+    "Gujarati": "Badha reviews use thayi gayu che! Navi shruuat karvani mate admin team ne sampark karo.",
+    "Hindi": "Sabhi reviews use ho gaye hain! Naye shuruat ke liye admin team se contact karen."
+  },
+  "contactLinks": [
+    { "label": "Call", "icon": "call.png", "url": "tel:+919274251298" },
+    { "label": "WhatsApp", "icon": "whatsapp.png", "url": "https://wa.me/919274251298" },
+    { "label": "Email", "icon": "email.png", "url": "mailto:info.goreview.in@gmail.com" },
+    { "label": "Website", "icon": "website.png", "url": "https://goreview.in" },
+    { "label": "Instagram", "icon": "instagram.png", "url": "https://instagram.com/addiverses" },
+    { "label": "LinkedIn", "icon": "linkdin.png", "url": "https://linkedin.com/company/addiverses" },
+    { "label": "Review", "icon": "review.png", "url": "../" }
+  ]
+}

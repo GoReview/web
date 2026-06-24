@@ -306,9 +306,7 @@ function generateReview(){
   }
 
   const fallback = [
-    'Very satisfied with the PCB design quality. The board was optimized, reliable, and delivered on schedule.',
-    'Excellent service and professional support. Highly recommended.',
-    'Great communication and fast delivery — highly recommended.'
+    'highly recommended.'
   ];
   reviewText.value = randomFromList(fallback);
   hasAvailableReviews = true;

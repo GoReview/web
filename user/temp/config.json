@@ -1,19 +1,19 @@
 {
-  "businessName": "Velocity - Igniting Innovation",
-  "businessTag": "PCB Design, Hardware & Product Development",
-  "logo": "vi2.png",
+  "businessName": "Addiverses",
+  "businessTag": "3D Printing Services – Custom Prototyping & Manufacturing",
+  "logo": "addiverses.png",
   "placeId": "ChIJ58gXCVSHXjkRE3moJOtVLHY",
   "googleReviewUrl": "https://search.google.com/local/writereview?placeid=ChIJ58gXCVSHXjkRE3moJOtVLHY",
   "contactUrl": "https://wa.me/919274524204",
   "pageUrl": "../",
   "contactPageUrl": "contact/",
   "startDate": "24-6-2026",
-  "expiryDate": "24-7-2026",
+  "expiryDate": "27-7-2026",
   "address": "SF/3, Shivam Complex, nr. Rajhans cinema, New India Colony, Nikol, Ahmedabad, Gujarat-380049",
-  "contactNote": "Thanks for visiting Velocity! Connect with us, share your experience, and stay updated with every option below.",
-  "topics": ["PCB Design", "Hardware Design", "Firmware", "Product Development", "Product Purchase"],
-  "selectedTopic": "PCB Design",
-  "languages": ["English", "Gujarati", "Hindi"],
+  "contactNote": "Thanks for visiting addiverses! Connect with us, share your experience, and stay updated with every option below.",
+  "topics": ["3D Printing", "3D Prototype", "Production"],
+  "selectedTopic": "3D Printing",
+  "languages": ["English"],
   "selectedLanguage": "English",
   "noReviewsMessage": {
     "English": "All reviews have been used! Please connect with admin team to start fresh.",
@@ -21,13 +21,14 @@
     "Hindi": "Sabhi reviews use ho gaye hain! Naye shuruat ke liye admin team se contact karen."
   },
   "contactLinks": [
-    { "label": "Call", "icon": "call.png", "url": "tel:+919274524204" },
+    { "label": "Call", "icon": "call.png", "url": "tel:+919999999999" },
     { "label": "WhatsApp", "icon": "whatsapp.png", "url": "https://wa.me/919274524204" },
-    { "label": "Email", "icon": "email.png", "url": "mailto:info.velocityi2@gmail.com" },
-    { "label": "Website", "icon": "website.png", "url": "https://velocityi2.in" },
+    { "label": "Email", "icon": "email.png", "url": "mailto:info.goreview.in@gmail.com" },
+    { "label": "Website", "icon": "website.png", "url": "https://goreview.in" },
     { "label": "Instagram", "icon": "instagram.png", "url": "https://instagram.com/velocityi2" },
-    { "label": "LinkedIn", "icon": "linkdin.png", "url": "https://linkedin.com/company/velocity-igniting-innovation/" },
+    { "label": "LinkedIn", "icon": "linkdin.png", "url": "https://linkedin.com/company/velocityi2" },
     { "label": "YouTube", "icon": "youtube.png", "url": "https://youtube.com/velocityi2" },
+    { "label": "Catalog", "icon": "catalog.png", "url": "https://velocityi2.com/catalog" },
     { "label": "Review", "icon": "review.png", "url": "../" }
   ]
 }
