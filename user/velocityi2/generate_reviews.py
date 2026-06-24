@@ -1,5 +1,6 @@
 import json
 import random
+import itertools
 
 # Your original source review phrases used to build unique permutations
 source_reviews = {
@@ -154,28 +155,53 @@ generated_count = 0
 for category in categories:
     for lang in languages:
         phrases = source_reviews[category][lang]
-        reviews_generated_for_this_combo = 0
-        attempts = 0
-        max_attempts = reviews_per_lang_per_topic * 20
-        
-        while reviews_generated_for_this_combo < reviews_per_lang_per_topic and attempts < max_attempts:
-            attempts += 1
-            
-            # Randomly select 1 to 2 phrases to keep review size 20-40 words
-            num_phrases = min(random.randint(1, 2), len(phrases))
-            chosen_phrases = random.sample(phrases, k=num_phrases)
-            simulated_review = " ".join(chosen_phrases)
-            
-            # Count words and check if within 20-40 word limit
-            word_count = len(simulated_review.split())
-            
-            # Ensure the generated review is unique and within word limit
-            if word_count >= 20 and word_count <= 40 and simulated_review not in output_data[category][lang]:
-                output_data[category][lang].append(simulated_review)
-                reviews_generated_for_this_combo += 1
-                generated_count += 1
-        
-        print(f"  {category} ({lang}): {reviews_generated_for_this_combo} reviews")
+        min_words = 2
+        max_words = 15
+        max_phrase_count = min(5, len(phrases))
+        generated_reviews = []
+        unique_reviews = set()
+
+        def is_valid_review(text):
+            wc = len(text.split())
+            return min_words <= wc <= max_words
+
+        # Always include all original full phrases first
+        for phrase in phrases:
+            if is_valid_review(phrase):
+                if phrase not in unique_reviews:
+                    unique_reviews.add(phrase)
+                    generated_reviews.append(phrase)
+
+        # Add full-phrase combinations until we have enough unique candidates
+        for phrase_count in range(2, max_phrase_count + 1):
+            for combo in itertools.product(phrases, repeat=phrase_count):
+                review = " ".join(combo)
+                if is_valid_review(review) and review not in unique_reviews:
+                    unique_reviews.add(review)
+                    generated_reviews.append(review)
+                    if len(generated_reviews) >= reviews_per_lang_per_topic:
+                        break
+            if len(generated_reviews) >= reviews_per_lang_per_topic:
+                break
+
+        # If there are not enough unique whole-phrase reviews, fill by repeating whole-phrase sequences
+        attempt = 0
+        while len(generated_reviews) < reviews_per_lang_per_topic and attempt < reviews_per_lang_per_topic * 10:
+            attempt += 1
+            phrase_count = random.randint(1, max_phrase_count)
+            combo = [random.choice(phrases) for _ in range(phrase_count)]
+            review = " ".join(combo)
+            if is_valid_review(review):
+                generated_reviews.append(review)
+
+        if len(generated_reviews) < reviews_per_lang_per_topic:
+            print(f"  {category} ({lang}): only {len(generated_reviews)} reviews generated. Add more source phrases or reduce the request.")
+        else:
+            generated_reviews = generated_reviews[:reviews_per_lang_per_topic]
+
+        output_data[category][lang] = generated_reviews
+        generated_count += len(generated_reviews)
+        print(f"  {category} ({lang}): {len(generated_reviews)} reviews")
 
 # Write to json file matching your requested format
 with open('reviews.json', 'w', encoding='utf-8') as f:
