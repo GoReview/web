@@ -167,6 +167,21 @@ function renderContactLinks(config, resourceBase){
   });
 }
 
+function addFooter(){
+  if(document.querySelector('footer.site-footer')) return;
+  const footer = document.createElement('footer');
+  footer.className = 'site-footer';
+  const text = document.createElement('p');
+  text.textContent = 'Powered by GoReview.in';
+  footer.appendChild(text);
+  const panel = document.querySelector('.review-panel');
+  if(panel){
+    panel.appendChild(footer);
+  } else {
+    document.body.appendChild(footer);
+  }
+}
+
 function randomFromList(list){
   return list[Math.floor(Math.random() * list.length)];
 }
@@ -391,6 +406,7 @@ async function initPage(){
   const configPath = isContactPage ? '../config.json' : 'config.json';
   const config = await loadConfig(configPath);
   window._velocityConfig = config;
+  addFooter();
 
   if(isContactPage){
     await initContactPage(config);
