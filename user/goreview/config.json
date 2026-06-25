@@ -1,6 +1,6 @@
 {
-  "businessName": "GoReview",
-  "businessTag": "3D Printing Services – Custom Prototyping & Manufacturing",
+  "businessName": "GoReview.in",
+  "businessTag": "Smart Google Review & Contact Page for Your Business",
   "logo": "goreview.png",
   "placeId": "ChIJ58gXCVSHXjkRE3moJOtVLHY",
   "googleReviewUrl": "https://search.google.com/local/writereview?placeid=ChIJ58gXCVSHXjkRE3moJOtVLHY",
@@ -11,7 +11,7 @@
   "expiryDate": "27-7-2026",
   "address": "Nikol, Ahmedabad, Gujarat-382350",
   "contactNote": "Thanks for visiting GoReview! Connect with us, share your experience, and stay updated with every option below.",
-  "topics": ["Google Review", "All-in-one Contact Page"],
+  "topics": ["Google Review", "Contact Page"],
   "selectedTopic": "Google Review",
   "languages": ["English", "Gujarati", "Hindi"],
   "selectedLanguage": "English",
