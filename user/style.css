@@ -83,7 +83,7 @@ textarea.review-text{width:100%;min-height:180px;padding:1rem;border-radius:14px
   .brand{flex-direction:row;align-items:center}
   .brand img{height:64px;width:64px}
   .topic-buttons{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0.45rem}
-  .topic-button{width:100%;text-align:center;padding:0.75rem;border-radius:8px}
+  .topic-button{width:100%;text-align:center;padding:0.50rem;border-radius:8px}
   .language-buttons{gap:0.3rem}
   .language-button{padding:0.5rem 0.8rem;font-size:0.82rem}
   .topic-label{font-size:0.95rem}

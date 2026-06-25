@@ -1,0 +1,34 @@
+{
+  "businessName": "Agni Ayurved Hospital",
+  "businessTag": "Better Health with Pure Ayurveda.",
+  "logo": "agniayurved.png",
+  "placeId": "ChIJP0JXpviHXjkRDQ55beAbTgw",
+  "googleReviewUrl": "https://search.google.com/local/writereview?placeid=ChIJP0JXpviHXjkRDQ55beAbTgw",
+  "contactUrl": "https://wa.me/918980003635",
+  "pageUrl": "../",
+  "contactPageUrl": "contact/",
+  "startDate": "25-6-2026",
+  "expiryDate": "30-7-2026",
+  "address": "205, Palm Arcade, Shukan Char Rasta, Nikol - Naroda Rd, New India Colony, Nikol, Ahmedabad, Gujarat 380049",
+  "contactNote": "Thanks for visiting Agni Ayurved Hospital! Connect with us, share your experience, and stay updated with every option below.",
+  "topics": ["વમન", "વિરેચન", "બસ્તિ", "નસ્ય", "રક્તમોક્ષણ"],
+  "selectedTopic": "વમન",
+  "languages": ["English", "Gujarati", "Hindi"],
+  "selectedLanguage": "English",
+  "noReviewsMessage": {
+    "English": "All reviews have been used! Please connect with admin team to start fresh.",
+    "Gujarati": "Badha reviews use thayi gayu che! Navi shruuat karvani mate admin team ne sampark karo.",
+    "Hindi": "Sabhi reviews use ho gaye hain! Naye shuruat ke liye admin team se contact karen."
+  },
+  "contactLinks": [
+    { "label": "Call", "icon": "call.png", "url": "tel:+918980003635" },
+    { "label": "WhatsApp", "icon": "whatsapp.png", "url": "https://wa.me/918980003635" },
+    { "label": "Email", "icon": "email.png", "url": "mailto:info.goreview.in@gmail.com" },
+    { "label": "Website", "icon": "website.png", "url": "https://www.agniayurvedhospital.com" },
+    { "label": "Instagram", "icon": "instagram.png", "url": "https://www.instagram.com/agni_ayurved_hospital/" },
+    { "label": "Facebook", "icon": "facebook.png", "url": "https://www.facebook.com/p/Agni-Ayurved-Hospital-61554457135582/" },
+    { "label": "LinkedIn", "icon": "linkdin.png", "url": "https://www.linkedin.com/company/agni-ayurved-hospital/" },
+    { "label": "YouTube", "icon": "youtube.png", "url": "https://www.youtube.com/@agni_ayurved_hospital" },
+    { "label": "Review", "icon": "review.png", "url": "../" }
+  ]
+}

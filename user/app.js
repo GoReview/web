@@ -147,7 +147,9 @@ function renderContactLinks(config, resourceBase){
     a.className = 'contact-link';
     const url = link.url || '#';
     a.href = url;
-    a.target = link.label === 'Review' ? '_self' : '_blank';
+    const isMailOrTel = /^mailto:|^tel:/i.test(url);
+    const isExternal = /^(https?:|\/\/)/i.test(url);
+    a.target = isMailOrTel || !isExternal ? '_self' : '_blank';
     if(a.target === '_blank') a.rel = 'noreferrer noopener';
 
     if(link.icon){
@@ -306,8 +308,16 @@ function generateReview(){
   }
 
   const fallback = [
-    'highly recommended.'
-  ];
+    'Highly recommended.', 'Excellent service.', 'Great experience.', 'Very satisfied.',
+    'Professional and reliable.', 'Outstanding support.', 'Exceptional quality.', 'Smooth process.',
+    'Friendly and helpful team.', 'Top-notch product.', 'Value for money.', 'Very polite and well-mannered staff.',
+    'Must visit place.', 'Absolutely worth it.', 'Highly professional behavior.', 'Very reasonable pricing.',
+    'Excellent quality work.', 'Will definitely visit again.', 'Best service in town.', 'Super fast service.',
+    'Very helpful and cooperative.', 'Fully satisfied with the work.', 'Genuine and transparent dealing.', 'Highly recommended for business.',
+    'Great service.', 'Pocket friendly prices.', 'Top-class customer service.', 'Hassle-free experience.',
+    'Trusted and reliable place.', 'They explain everything clearly.', 'Excellent coordination and support.', 'On-time delivery and service.',
+    'Superb quality and finish.', 'One-stop shop for all needs.', 'Worth every single penny.', 'Keep up the good work.'
+    ];
   reviewText.value = randomFromList(fallback);
   hasAvailableReviews = true;
   if(copyOpenBtn) copyOpenBtn.disabled = false;
@@ -345,6 +355,9 @@ async function initReviewPage(config){
   userFolder = window.location.pathname.split('/').filter(p => p).slice(-2)[0] || 'default';
   
   currentConfig = config;
+  if(config && config.businessName){
+    document.title = config.businessName;
+  }
   setReviewPageMetadata(config, '');
   const actionUrl = '../../index.html';
   const pagePanel = document.querySelector('.review-panel');
@@ -364,6 +377,9 @@ async function initReviewPage(config){
 
 async function initContactPage(config){
   setContactPageMetadata(config, '../');
+  if(config && config.businessName){
+    document.title = config.businessName;
+  }
   const actionUrl = '../../../index.html';
   const pagePanel = document.querySelector('.review-panel.contact-panel');
   renderExpiryNotice(config, pagePanel, actionUrl);
