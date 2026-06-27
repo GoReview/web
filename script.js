@@ -1,3 +1,45 @@
+// Launch Countdown Timer
+function initLaunchCountdown() {
+  // CHANGE THIS DATE TO YOUR LAUNCH DATE
+  // Format: new Date('YYYY-MM-DD HH:mm:ss')
+  const launchTime = new Date('2026-06-27 17:59:00');
+  const launchDate = launchTime.getTime();
+  
+  function updateCountdown() {
+    const currentTime = new Date().getTime();
+    const distance = launchDate - currentTime;
+    
+    if (distance < 0) {
+      const overlay = document.getElementById('launchOverlay');
+      if (overlay) {
+        overlay.style.animation = 'fadeOut 3s ease forwards';
+        setTimeout(() => {
+          overlay.classList.remove('active');
+        }, 3000);
+      }
+      return;
+    }
+    
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    const daysEl = document.getElementById('countdownDays');
+    const hoursEl = document.getElementById('countdownHours');
+    const minutesEl = document.getElementById('countdownMinutes');
+    const secondsEl = document.getElementById('countdownSeconds');
+    
+    if (daysEl) daysEl.textContent = String(days).padStart(2, '0');
+    if (hoursEl) hoursEl.textContent = String(hours).padStart(2, '0');
+    if (minutesEl) minutesEl.textContent = String(minutes).padStart(2, '0');
+    if (secondsEl) secondsEl.textContent = String(seconds).padStart(2, '0');
+  }
+  
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+}
+
 // Mobile Menu Hamburger Toggle
 function initMobileMenu() {
   const hamburgerBtn = document.getElementById('hamburgerBtn');
@@ -10,7 +52,6 @@ function initMobileMenu() {
       mobileMenu.classList.toggle('active');
     });
 
-    // Close menu when a link is clicked
     mobileMenuLinks.forEach(link => {
       link.addEventListener('click', function() {
         hamburgerBtn.classList.remove('active');
@@ -18,7 +59,6 @@ function initMobileMenu() {
       });
     });
 
-    // Close menu when clicking outside
     document.addEventListener('click', function(event) {
       const isClickInsideMenu = mobileMenu.contains(event.target);
       const isClickOnHamburger = hamburgerBtn.contains(event.target);
@@ -36,7 +76,7 @@ function openVideoModal(event) {
   if (event) event.preventDefault();
   const modal = document.getElementById('videoModal');
   if (modal) {
-    modal.style.display = 'flex';
+    modal.classList.add('active');
     document.body.style.overflow = 'hidden';
   }
 }
@@ -44,14 +84,15 @@ function openVideoModal(event) {
 function closeVideoModal() {
   const modal = document.getElementById('videoModal');
   if (modal) {
-    modal.style.display = 'none';
+    modal.classList.remove('active');
     document.body.style.overflow = 'auto';
   }
 }
 
-// Close video modal when clicking outside
+// Document Ready
 document.addEventListener('DOMContentLoaded', function() {
   initMobileMenu();
+  initLaunchCountdown();
   
   const videoModal = document.getElementById('videoModal');
   
@@ -68,10 +109,8 @@ document.addEventListener('DOMContentLoaded', function() {
   
   faqQuestions.forEach(question => {
     question.addEventListener('click', function() {
-      const faqItem = this.closest('.faq-item');
       const isExpanded = this.getAttribute('aria-expanded') === 'true';
       
-      // Close all other open FAQ items
       faqQuestions.forEach(q => {
         if (q !== this) {
           q.setAttribute('aria-expanded', 'false');
@@ -83,7 +122,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       });
       
-      // Toggle current FAQ item
       const newState = !isExpanded;
       this.setAttribute('aria-expanded', newState);
       
@@ -130,7 +168,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }, observerOptions);
 
-  // Observe fade-in and scale-up elements
   document.querySelectorAll('.fade-in, .scale-up').forEach(el => {
     observer.observe(el);
   });
