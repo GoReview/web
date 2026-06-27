@@ -2,7 +2,7 @@
 function initLaunchCountdown() {
   // CHANGE THIS DATE TO YOUR LAUNCH DATE
   // Format: new Date('YYYY-MM-DD HH:mm:ss')
-  const launchTime = new Date('2026-06-27 17:59:00');
+  const launchTime = new Date('2026-06-28 11:55:00');
   const launchDate = launchTime.getTime();
   
   function updateCountdown() {
