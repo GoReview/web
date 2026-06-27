@@ -1,3 +1,36 @@
+// Mobile Menu Hamburger Toggle
+function initMobileMenu() {
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+
+  if (hamburgerBtn && mobileMenu) {
+    hamburgerBtn.addEventListener('click', function() {
+      hamburgerBtn.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
+    });
+
+    // Close menu when a link is clicked
+    mobileMenuLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        hamburgerBtn.classList.remove('active');
+        mobileMenu.classList.remove('active');
+      });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+      const isClickInsideMenu = mobileMenu.contains(event.target);
+      const isClickOnHamburger = hamburgerBtn.contains(event.target);
+      
+      if (!isClickInsideMenu && !isClickOnHamburger && mobileMenu.classList.contains('active')) {
+        hamburgerBtn.classList.remove('active');
+        mobileMenu.classList.remove('active');
+      }
+    });
+  }
+}
+
 // Video Modal Functions
 function openVideoModal(event) {
   if (event) event.preventDefault();
@@ -18,6 +51,8 @@ function closeVideoModal() {
 
 // Close video modal when clicking outside
 document.addEventListener('DOMContentLoaded', function() {
+  initMobileMenu();
+  
   const videoModal = document.getElementById('videoModal');
   
   if (videoModal) {

@@ -23,19 +23,29 @@
           </div>
           <div class="logo-text">
             <strong>GoReview.in</strong>
-            <span>Smart Google Review Solutions</span>
+            <span>SMART REVIEW WRITING PLATFORM</span>
           </div>
         </a>
         <nav class="nav-links" aria-label="Primary navigation">
-          <a href="#how-it-works">How it Works</a>
-          <a href="#languages">Languages</a>
+          <a href="#how-it-works">How it work</a>
           <a href="#features">Features</a>
-          <a href="#contact">Live Demo</a>
+          <a href="#plans">Plans</a>
+          <a href="#contact">Contact us</a>
         </nav>
         <div class="nav-actions">
-          <a href="#contact" class="button button-primary">Request Demo</a>
         </div>
+        <button class="hamburger-menu" id="hamburgerBtn" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
+      <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+        <a href="#how-it-works" class="mobile-menu-link">How it work</a>
+        <a href="#features" class="mobile-menu-link">Features</a>
+        <a href="#plans" class="mobile-menu-link">Plans</a>
+        <a href="#contact" class="mobile-menu-link">Contact us</a>
+      </nav>
     </header>
 
     <main>
@@ -80,7 +90,7 @@
                   </div>
                   <div class="flow-step">
                     <div class="badge"><img src="Image/language.png" alt="Language" class="badge-img" /></div>
-                    <strong>Select Language</strong>
+                    <strong>Select Topic & Language</strong>
                     <small>Choose English, Hindi, or Gujarati.</small>
                   </div>
                   <div class="flow-step">
@@ -140,7 +150,7 @@
             </div>
             <div class="step-card fade-in">
               <div class="icon"><img src="Image/language.png" alt="Language" class="step-icon" /></div>
-              <h3>Step 2: Select Language</h3>
+              <h3>Step 2: Select Topic & Language</h3>
               <p>Options include English, Hindi (Hinglish), and Gujarati (Gujlish) for every audience.</p>
             </div>
             <div class="step-card fade-in">
@@ -187,33 +197,38 @@
               <div class="eyebrow">Business Profile Feature</div>
               <h2 class="section-title" style="margin-top: 0.5rem;">Digital Business Profile Included</h2>
               <p style="max-width: 620px; color: var(--muted);">Every customer gets access to a complete digital business profile with contact actions, reviews, social channels, and product details.</p>
-              <div class="profile-card scale-up">
-                <div class="profile-card-top">
+              <div class="profile-card">
+              <div class="profile-card-top">
                   <div class="profile-card-logo">
-                    <img src="Image/logo.png" alt="GoReview logo" />
+                      <img src="Image/logo.png" alt="">
                   </div>
                   <div class="profile-card-copy">
-                    <strong>GoReview - Smart Review Growth</strong>
-                    <span>Premium review workflows, QR capture, and profile links built for modern businesses.</span>
-                    <p>GoReview helps your customers leave authentic Google reviews quickly, with multilingual support and one shared link for every contact channel.</p>
+                      <strong>GoReview - Smart Review Growth</strong>
+                      <span>Premium review workflows, QR capture, and profile links built for modern businesses.</span>
+                      <p>
+                          GoReview helps your customers leave authentic Google reviews quickly,
+                          with multilingual support and one shared link for every contact channel.
+                      </p>
                   </div>
-                </div>
-                <div class="profile-card-links">
-                  <p>Thanks for visiting GoReview! Connect with us, share your experience, and stay updated.</p>
-                  <div class="profile-links-grid">
-                    <a href="#"><img src="Image/call.png" alt="Call" />Call</a>
-                    <a href="#"><img src="Image/whatsapp.png" alt="WhatsApp" />WhatsApp</a>
-                    <a href="#"><img src="Image/email.png" alt="Email" />Email</a>
-                    <a href="#"><img src="Image/website.png" alt="Website" />Website</a>
-                    <a href="#"><img src="Image/instagram.png" alt="Instagram" />Instagram</a>
-                    <a href="#"><img src="Image/linkdin.png" alt="LinkedIn" />LinkedIn</a>
-                    <a href="#"><img src="Image/facebook.png" alt="Facebook" />Facebook</a>
-                    <a href="#"><img src="Image/youtube.png" alt="YouTube" />YouTube</a>
-                    <a href="#"><img src="Image/review.png" alt="Google Review" />Google Review</a>
-                    <a href="#"><img src="Image/catalog.png" alt="Product Catalog" />Catalog</a>
-                  </div>
-                </div>
               </div>
+              <div class="profile-images">
+                  <img src="Image/f1.png" class="profile-img">
+                  <img src="Image/f2.png" class="profile-img">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section id="features">
+        <div class="container">
+          <div class="fade-in plan-section">
+            <div class="eyebrow">Pricing Model</div>
+            <h2 class="section-title" style="margin-top: 0.5rem;">Subscription Plan Features </h2>
+            <p style="max-width: 620px; color: var(--muted);">Affordable plans for businesses of every size to collect reviews faster and grow their online presence.</p> 
+            <div class="plan-image-full">
+              <img src="Image/subscription.jpg" alt="GoReview subscription plans" class="subscription-image"/>
+            </div>
           </div>
         </div>
       </section>
@@ -255,7 +270,7 @@
         </div>
       </section>
 
-      <section class="section-compact">
+      <!-- <section class="section-compact">
         <div class="container">
           <div class="fade-in">
             <div class="eyebrow">Testimonials</div>
@@ -288,7 +303,7 @@
             </article>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <section id="faq" class="section-compact">
         <div class="container fade-in">
@@ -323,14 +338,17 @@
         </div>
       </section>
 
-      <section id="contact" style="background: linear-gradient(180deg, #f0f4f9, #e8eff7);  padding: 4rem 0;">
-        <div class="container contact-panel fade-in">
-          <div class="contact-copy">
-            <span class="eyebrow" style="color: #FF8A00;">Get Started</span>
-            <h2 class="section-title" style="color: #071E3A;">Ready To Grow Your Google Reviews?</h2>
-            <p style="color: #475569;">Start with a premium review workflow, a branded profile landing page, and fast customer review capture.</p>
-            <div class="contact-actions">
-              <a href="https://wa.me/919274524204" class="button button-primary" style="font-weight: 700; font-size: 1.2rem;"> Contact Us</a>
+      <section id="contact" class="cta-section">
+        <div class="container">
+          <div class="cta-card fade-in">
+            <div class="cta-copy">
+              <span class="eyebrow">Get Started</span>
+              <h2 class="section-title">Ready To Grow Your Google Reviews?</h2>
+              <p>Start with a premium review workflow, a branded profile landing page, and fast customer review capture.</p>
+            </div>
+            <div class="cta-action">
+              <a href="https://wa.me/919274524204" class="button button-primary cta-button"> Contact Us</a>
+              <div class="cta-trust">Trusted by modern businesses for a fast, premium review experience.</div>
             </div>
           </div>
         </div>
