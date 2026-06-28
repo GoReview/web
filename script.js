@@ -1,4 +1,17 @@
 window.LAUNCH_TIME = "2026-06-28T11:55:00";
+
+const launchTime = new Date(window.LAUNCH_TIME);
+
+if (
+    window.location.pathname.endsWith("index.html") ||
+    window.location.pathname === "/" ||
+    window.location.pathname === ""
+) {
+    if (Date.now() < launchTime.getTime()) {
+        window.location.replace("countdown.html");
+    }
+}
+
 // Mobile Menu Hamburger Toggle
 function initMobileMenu() {
   const hamburgerBtn = document.getElementById('hamburgerBtn');
@@ -115,18 +128,4 @@ document.addEventListener('DOMContentLoaded', function() {
   }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
   document.querySelectorAll('.fade-in, .scale-up').forEach(el => observer.observe(el));
-
-  const launchTime = new Date(window.LAUNCH_TIME);
-const path = window.location.pathname.toLowerCase();
-
-const isIndex =
-    path === "/" ||
-    path === "" ||
-    path.endsWith("/") ||
-    path.endsWith("/index.html") ||
-    path === "/index.html";
-
-if (new Date() < launchTime && isIndex) {
-    window.location.replace("countdown.html");
-}
 });

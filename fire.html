@@ -22,8 +22,8 @@
 		<script>
 			window.oncontextmenu = function () { return false; }
 
-			setTimeout(function () {
-				window.location.href = "/";
+			setTimeout(() => {
+				window.location.replace("index.html");
 			}, 10000);
 
 			var canvas = document.getElementById('canvas');
