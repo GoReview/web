@@ -95,7 +95,7 @@
 
     <script src="script.js"></script>
     <script>
-      const launchTime = new Date(LAUNCH_TIME);
+      const launchTime = new Date(window.LAUNCH_TIME);
       const statusEl = document.getElementById("status");
 
       function pad(n) {
@@ -108,7 +108,7 @@
 
         if (diff <= 0) {
           statusEl.textContent = "Launch started! Opening fireworks...";
-          setTimeout(() => window.location.href = "fire.html", 500);
+          setTimeout(() => window.location.replace("fire.html"), 500);
           return;
         }
 
