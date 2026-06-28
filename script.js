@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 window.LAUNCH_TIME = "2026-06-28T08:45:00";
+=======
+window.LAUNCH_TIME = "2026-06-28T11:55:00";
+>>>>>>> 93f1c07 (time change)
 
 // Mobile Menu Hamburger Toggle
 function initMobileMenu() {
