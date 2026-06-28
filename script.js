@@ -1,4 +1,4 @@
-window.LAUNCH_TIME = "2026-06-28T08:40:00";
+window.LAUNCH_TIME = "2026-06-28T08:45:00";
 
 // Mobile Menu Hamburger Toggle
 function initMobileMenu() {
@@ -119,8 +119,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   const launchTime = new Date(window.LAUNCH_TIME);
   const path = window.location.pathname.toLowerCase();
+  const isRoot = path === '/' || path === '' || path.endsWith('/');
 
-  if ((path === '/' || path.endsWith('/index.html') || path.endsWith('/')) && new Date() < launchTime) {
+  if (isRoot && new Date() < launchTime) {
     window.location.replace('countdown.html');
   }
 });
