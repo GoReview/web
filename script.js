@@ -1,17 +1,3 @@
-window.LAUNCH_TIME = "2026-06-28T11:55:00";
-
-const launchTime = new Date(window.LAUNCH_TIME);
-
-if (
-    window.location.pathname.endsWith("index.html") ||
-    window.location.pathname === "/" ||
-    window.location.pathname === ""
-) {
-    if (Date.now() < launchTime.getTime()) {
-        window.location.replace("countdown.html");
-    }
-}
-
 // Mobile Menu Hamburger Toggle
 function initMobileMenu() {
   const hamburgerBtn = document.getElementById('hamburgerBtn');
@@ -24,6 +10,7 @@ function initMobileMenu() {
       mobileMenu.classList.toggle('active');
     });
 
+    // Close menu when a link is clicked
     mobileMenuLinks.forEach(link => {
       link.addEventListener('click', function() {
         hamburgerBtn.classList.remove('active');
@@ -31,10 +18,11 @@ function initMobileMenu() {
       });
     });
 
+    // Close menu when clicking outside
     document.addEventListener('click', function(event) {
       const isClickInsideMenu = mobileMenu.contains(event.target);
       const isClickOnHamburger = hamburgerBtn.contains(event.target);
-
+      
       if (!isClickInsideMenu && !isClickOnHamburger && mobileMenu.classList.contains('active')) {
         hamburgerBtn.classList.remove('active');
         mobileMenu.classList.remove('active');
@@ -43,6 +31,7 @@ function initMobileMenu() {
   }
 }
 
+// Video Modal Functions
 function openVideoModal(event) {
   if (event) event.preventDefault();
   const modal = document.getElementById('videoModal');
@@ -60,10 +49,12 @@ function closeVideoModal() {
   }
 }
 
+// Close video modal when clicking outside
 document.addEventListener('DOMContentLoaded', function() {
   initMobileMenu();
-
+  
   const videoModal = document.getElementById('videoModal');
+  
   if (videoModal) {
     videoModal.addEventListener('click', function(event) {
       if (event.target === videoModal) {
@@ -72,11 +63,15 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
+  // FAQ Accordion Functionality
   const faqQuestions = document.querySelectorAll('.faq-question');
+  
   faqQuestions.forEach(question => {
     question.addEventListener('click', function() {
+      const faqItem = this.closest('.faq-item');
       const isExpanded = this.getAttribute('aria-expanded') === 'true';
-
+      
+      // Close all other open FAQ items
       faqQuestions.forEach(q => {
         if (q !== this) {
           q.setAttribute('aria-expanded', 'false');
@@ -87,10 +82,11 @@ document.addEventListener('DOMContentLoaded', function() {
           }
         }
       });
-
+      
+      // Toggle current FAQ item
       const newState = !isExpanded;
       this.setAttribute('aria-expanded', newState);
-
+      
       const answer = this.nextElementSibling;
       if (answer) {
         if (newState) {
@@ -104,12 +100,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
+  // Smooth scroll behavior for navigation links
   const navLinks = document.querySelectorAll('a[href^="#"]');
   navLinks.forEach(link => {
     link.addEventListener('click', function(e) {
       const href = this.getAttribute('href');
       if (href === '#') return;
-
+      
       const target = document.querySelector(href);
       if (target) {
         e.preventDefault();
@@ -118,6 +115,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
+  // Initialize animations on scroll
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
   const observer = new IntersectionObserver(function(entries) {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -125,7 +128,10 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  }, observerOptions);
 
-  document.querySelectorAll('.fade-in, .scale-up').forEach(el => observer.observe(el));
+  // Observe fade-in and scale-up elements
+  document.querySelectorAll('.fade-in, .scale-up').forEach(el => {
+    observer.observe(el);
+  });
 });

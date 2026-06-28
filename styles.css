@@ -45,242 +45,6 @@ section.section-compact { padding: 72px 0; }
   width: min(var(--container-width), calc(100% - (var(--container-padding) * 2)));
 }
 
-/* Animations */
-@keyframes fall {
-  to {
-    transform: translateY(100vh) rotate(360deg);
-    opacity: 0;
-  }
-}
-
-@keyframes float {
-  to {
-    transform: translateY(-100vh) rotate(20deg);
-    opacity: 0;
-  }
-}
-
-@keyframes sparkle {
-  0%, 100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.3;
-    transform: scale(0.5);
-  }
-}
-
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translate(-50%, -60%);
-  }
-  to {
-    opacity: 1;
-    transform: translate(-50%, -50%);
-  }
-}
-
-@keyframes slideInBig {
-  from {
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(0.3);
-  }
-  to {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-  }
-}
-
-@keyframes slideOut {
-  from {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-  }
-  to {
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(0.3);
-  }
-}
-
-@keyframes bounce {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-}
-
-@keyframes pulse {
-  0%, 100% {
-    transform: translate(-50%, -50%) scale(1);
-  }
-  50% {
-    transform: translate(-50%, -50%) scale(1.05);
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-
-@keyframes scaleIn {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-/* Launch Overlay Screen - MODERN LIGHT THEME */
-.launch-overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, #ffffff 0%, #f5f7ff 50%, #faf8ff 100%);
-  z-index: 9999;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  transition: opacity 0.5s ease;
-}
-
-.launch-overlay::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: 
-    radial-gradient(circle at 15% 30%, rgba(255, 107, 0, 0.08) 0%, transparent 40%),
-    radial-gradient(circle at 85% 70%, rgba(255, 165, 0, 0.06) 0%, transparent 40%),
-    radial-gradient(circle at 50% 50%, rgba(255, 208, 65, 0.04) 0%, transparent 50%);
-  pointer-events: none;
-}
-
-.launch-overlay.active {
-  display: flex;
-}
-
-.launch-overlay.fade-out {
-  animation: fadeOut 3s ease forwards;
-}
-
-.launch-overlay-content {
-  text-align: center;
-  color: #071E3A;
-  animation: scaleIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
-  position: relative;
-  z-index: 1;
-  max-width: 800px;
-}
-
-.launch-overlay-content h1 {
-  font-size: clamp(2.2rem, 6vw, 8rem);
-  margin: 0 0 0.75rem;
-  font-weight: 900;
-  letter-spacing: -0.5px;
-  color: #071E3A;
-  line-height: 1.1;
-}
-
-.launch-overlay-content p {
-  font-size: 1.8rem;
-  margin: 0 0 2.5rem;
-  color: #475569;
-  font-weight: 500;
-  letter-spacing: 0.3px;
-}
-
-.countdown-timer {
-  display: flex;
-  justify-content: center;
-  gap: 1.2rem;
-  flex-wrap: wrap;
-  margin-top: 1.5rem;
-}
-
-/* MODERN LIGHT COUNTDOWN BOXES */
-.countdown-box {
-  background: #ffffff;
-  border: 2px solid #f0f0f0;
-  border-radius: 20px;
-  padding: 2rem 1.5rem;
-  min-width: 120px;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 10px 40px rgba(7, 30, 58, 0.08);
-  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-.countdown-box:hover {
-  border-color: #FFD041;
-  box-shadow: 0 15px 50px rgba(255, 107, 0, 0.15);
-  transform: translateY(-4px);
-}
-
-.countdown-box::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, transparent, #FFD041, #FF8A00, transparent);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.countdown-box:hover::before {
-  opacity: 1;
-}
-
-.countdown-number {
-  display: block;
-  font-size: 2.4rem;
-  font-weight: 900;
-  color: #FF8A00;
-  margin-bottom: 0.5rem;
-  position: relative;
-  z-index: 1;
-  letter-spacing: -1px;
-  line-height: 1;
-}
-
-.countdown-label {
-  margin: 0;
-  font-size: 0.8rem;
-  color: #475569;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  font-weight: 700;
-  position: relative;
-  z-index: 1;
-}
-
 /* CTA */
 .cta-section {
   background: linear-gradient(180deg, #f4f7fb 0%, #eaf0f7 100%);
@@ -938,7 +702,7 @@ section.section-compact { padding: 72px 0; }
 
 .subscription-image{
     width: 100%;
-    border-radius: 25px;
+    border-radius: 40px;
     border: 8px solid #ffffff;
     box-shadow: 0 15px 40px rgba(7,30,58,0.08);
 }
@@ -1272,6 +1036,11 @@ section.section-compact { padding: 72px 0; }
 .video-modal-close:hover { background: rgba(255, 255, 255, 0.25); }
 .video-container { width: 100%; height: 100%; }
 
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 @media (max-width: 1024px) {
   .hero-grid,
   .feature-block,
@@ -1297,10 +1066,6 @@ section.section-compact { padding: 72px 0; }
     text-align: center;
   }
   .cta-copy { justify-items: center; }
-  
-  .launch-overlay-content h1 {
-    font-size: 4rem;
-  }
 }
 
 @media (max-width: 768px) {
@@ -1342,27 +1107,6 @@ section.section-compact { padding: 72px 0; }
     min-width: 0;
     max-width: 320px;
   }
-
-  .countdown-timer {
-    gap: 1rem;
-  }
-
-  .countdown-box {
-    padding: 1.5rem 1rem;
-    min-width: 100px;
-  }
-
-  .countdown-number {
-    font-size: 2rem;
-  }
-
-  .launch-overlay-content h1 {
-    font-size: 4rem;
-  }
-
-  .launch-overlay-content p {
-    font-size: 1rem;
-  }
 }
 
 @media (max-width: 540px) {
@@ -1387,23 +1131,4 @@ section.section-compact { padding: 72px 0; }
   .cta-card { padding: 32px 20px; }
   .cta-copy p,
   .cta-trust { max-width: 100%; }
-
-  .countdown-timer {
-    gap: 0.75rem;
-  }
-
-  .countdown-box {
-    padding: 1rem 0.75rem;
-    min-width: 80px;
-  }
-   .launch-overlay-content h1 {
-    font-size: 4rem;
-  }
-  .countdown-number {
-    font-size: 1.5rem;
-  }
-
-  .countdown-label {
-    font-size: 0.75rem;
-  }
 }
