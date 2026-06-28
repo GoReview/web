@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Launch Countdown</title>
+    <style>
+      :root {
+        --bg: #071e3a;
+        --card: #ffffff;
+        --text: #071e3a;
+        --muted: #5b6b7f;
+        --accent: #ff8a00;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        font-family: Arial, sans-serif;
+        background: radial-gradient(circle at top, #12315f, var(--bg));
+        color: #fff;
+      }
+      .wrap {
+        width: min(720px, calc(100% - 32px));
+        background: rgba(255,255,255,0.08);
+        border: 1px solid rgba(255,255,255,0.12);
+        backdrop-filter: blur(10px);
+        border-radius: 28px;
+        padding: 32px;
+        text-align: center;
+        box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+      }
+      h1 { margin: 0 0 10px; font-size: clamp(28px, 4vw, 44px); }
+      p { margin: 0 0 24px; color: rgba(255,255,255,0.8); }
+      .target {
+        display: inline-block;
+        margin-bottom: 24px;
+        padding: 10px 16px;
+        border-radius: 999px;
+        background: rgba(255,255,255,0.12);
+        font-weight: 700;
+      }
+      .countdown {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+      }
+      .box {
+        background: var(--card);
+        color: var(--text);
+        border-radius: 20px;
+        padding: 18px 10px;
+      }
+      .num {
+        display: block;
+        font-size: clamp(26px, 5vw, 44px);
+        font-weight: 800;
+        color: var(--accent);
+        line-height: 1;
+      }
+      .label {
+        display: block;
+        margin-top: 6px;
+        font-size: 13px;
+        color: var(--muted);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+      .status {
+        margin-top: 20px;
+        font-weight: 700;
+      }
+      @media (max-width: 640px) {
+        .countdown { grid-template-columns: repeat(2, 1fr); }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>Launch Countdown</h1>
+      <p>Waiting for the launch time.</p>
+      <div class="target">Launch: 28-06-2026 11:55 AM</div>
+
+      <div class="countdown">
+        <div class="box"><span id="days" class="num">0</span><span class="label">Days</span></div>
+        <div class="box"><span id="hours" class="num">0</span><span class="label">Hours</span></div>
+        <div class="box"><span id="minutes" class="num">0</span><span class="label">Minutes</span></div>
+        <div class="box"><span id="seconds" class="num">0</span><span class="label">Seconds</span></div>
+      </div>
+
+      <div id="status" class="status">Checking launch time...</div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+      const launchTime = new Date(LAUNCH_TIME);
+      const statusEl = document.getElementById("status");
+
+      function pad(n) {
+        return String(n).padStart(2, "0");
+      }
+
+      function updateCountdown() {
+        const now = new Date();
+        const diff = launchTime - now;
+
+        if (diff <= 0) {
+          statusEl.textContent = "Launch started! Opening fireworks...";
+          setTimeout(() => window.location.href = "fire.html", 500);
+          return;
+        }
+
+        const totalSeconds = Math.floor(diff / 1000);
+        const days = Math.floor(totalSeconds / 86400);
+        const hours = Math.floor((totalSeconds % 86400) / 3600);
+        const minutes = Math.floor((totalSeconds % 3600) / 60);
+        const seconds = totalSeconds % 60;
+
+        document.getElementById("days").textContent = days;
+        document.getElementById("hours").textContent = pad(hours);
+        document.getElementById("minutes").textContent = pad(minutes);
+        document.getElementById("seconds").textContent = pad(seconds);
+
+        statusEl.textContent = "Launch in progress...";
+      }
+
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+    </script>
+  </body>
+</html>

@@ -13,30 +13,9 @@
     <link rel="apple-touch-icon" href="Image/favicon.png" />
     <meta name="theme-color" content="#001f5b" />
     <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
   </head>
   <body>
-    <!-- Launch Countdown Overlay Screen -->
-    <div id="launchOverlay" class="launch-overlay active">
-      <div class="launch-overlay-content">
-        <h1>Coming Soon</h1>
-        <p>We're launching something amazing!</p>
-        <div class="countdown-timer">
-          <div class="countdown-box">
-            <span id="countdownHours" class="countdown-number">00</span>
-            <p class="countdown-label">Hours</p>
-          </div>
-          <div class="countdown-box">
-            <span id="countdownMinutes" class="countdown-number">00</span>
-            <p class="countdown-label">Minutes</p>
-          </div>
-          <div class="countdown-box">
-            <span id="countdownSeconds" class="countdown-number">00</span>
-            <p class="countdown-label">Seconds</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <header class="header">
       <div class="container navbar">
         <a href="#" class="logo">
@@ -54,8 +33,7 @@
           <a href="#plans">Plans</a>
           <a href="#contact">Contact us</a>
         </nav>
-        <div class="nav-actions">
-        </div>
+        <div class="nav-actions"></div>
         <button class="hamburger-menu" id="hamburgerBtn" aria-label="Toggle menu">
           <span></span>
           <span></span>
@@ -79,10 +57,10 @@
             <p>Help your customers leave professional Google reviews in just 4 simple steps with a modern QR-based workflow designed for growth.</p>
             <div class="hero-actions">
               <a href="#contact" class="button button-primary">Request Demo</a>
-              <!-- <a href="#" class="button button-secondary" onclick="openVideoModal(event)">
+              <a href="#" class="button button-secondary" onclick="openVideoModal(event)">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M5 3v18l15-9L5 3z" fill="#071E3A"/></svg>
                 Watch Demo
-              </a> -->
+              </a>
             </div>
             <div class="hero-stats">
               <div class="stat-card">
@@ -97,7 +75,7 @@
           </div>
           <div class="hero-visual scale-up">
             <div class="visual-card">
-              <!-- <img src="Image/google_review.png" alt="GoReview demo" class="hero-illustration" style="width:100%;border-radius:18px;margin-bottom:1rem;object-fit:cover;\" /> -->
+              <!-- <img src="Image/google_review.png" alt="GoReview demo" class="hero-illustration" style="width:100%;border-radius:18px;margin-bottom:1rem;object-fit:cover;" /> -->
               <div class="phone-frame" aria-hidden="true">
                 <div class="phone-header">
                   <span></span>
@@ -198,15 +176,15 @@
           <div class="language-grid" style="margin-top: 2rem;">
             <article class="language-card fade-in">
               <div class="language-icon"><span class="language-pill">EN</span><strong>English</strong></div>
-              <p>"Excellent service and professional support. Highly recommended."</p>
+              <p>“Excellent service and professional support. Highly recommended.”</p>
             </article>
             <article class="language-card fade-in">
               <div class="language-icon"><span class="language-pill">HI</span><strong>Hindi (Hinglish)</strong></div>
-              <p>"Bahut achhi service mili. Team ka support bhi bahut accha tha."</p>
+              <p>“Bahut achhi service mili. Team ka support bhi bahut accha tha.”</p>
             </article>
             <article class="language-card fade-in">
               <div class="language-icon"><span class="language-pill">GU</span><strong>Gujarati (Gujlish)</strong></div>
-              <p>"Service khub sari mali. Team no support pan khub saras hato."</p>
+              <p>“Service khub sari mali. Team no support pan khub saras hato.”</p>
             </article>
           </div>
         </div>
@@ -305,7 +283,7 @@
                 <div><span>Arun's Cafe</span><small style="color: var(--muted);">Cafe Owner</small></div>
               </div>
               <div class="star-row">★★★★★</div>
-              <p>"GoReview made collecting quality Google reviews effortless. Our customers love the language options and our ranking improved within days."</p>
+              <p>“GoReview made collecting quality Google reviews effortless. Our customers love the language options and our ranking improved within days.”</p>
             </article>
             <article class="testimonial-card scale-up">
               <div class="testimonial-header">
@@ -313,7 +291,7 @@
                 <div><span>Hotel Sunrise</span><small style="color: var(--muted);">Hospitality Lead</small></div>
               </div>
               <div class="star-row">★★★★★</div>
-              <p>"The QR workflow is seamless, and the generated reviews feel authentic. It's a very polished system for modern businesses."</p>
+              <p>“The QR workflow is seamless, and the generated reviews feel authentic. It’s a very polished system for modern businesses.”</p>
             </article>
             <article class="testimonial-card scale-up">
               <div class="testimonial-header">
@@ -321,7 +299,7 @@
                 <div><span>Dr. Desai Clinic</span><small style="color: var(--muted);">Clinic Manager</small></div>
               </div>
               <div class="star-row">★★★★★</div>
-              <p>"Our patients can now leave detailed reviews quickly in Gujarati or Hindi, which has helped build trust and visibility online."</p>
+              <p>“Our patients can now leave detailed reviews quickly in Gujarati or Hindi, which has helped build trust and visibility online.”</p>
             </article>
           </div>
         </div>
@@ -338,7 +316,7 @@
             </div>
             <div class="faq-item">
               <button class="faq-question" aria-expanded="false">Can reviews be generated in Gujarati?</button>
-              <div class="faq-answer"><p>Yes. GoReview supports Gujarati (Gujlish), Hindi (Hinglish), and English to match your customers' preferences.</p></div>
+              <div class="faq-answer"><p>Yes. GoReview supports Gujarati (Gujlish), Hindi (Hinglish), and English to match your customers’ preferences.</p></div>
             </div>
             <div class="faq-item">
               <button class="faq-question" aria-expanded="false">Can I add social media links?</button>
