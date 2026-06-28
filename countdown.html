@@ -98,17 +98,17 @@
     </script>
     <script src="script.js"></script>
     <script>
-      const launchTime = new Date(window.LAUNCH_TIME);
       const statusEl = document.getElementById("status");
       const targetText = document.getElementById("targetText");
 
-      targetText.textContent = "Launch: " + launchTime.toLocaleString();
+      targetText.textContent = "Launch: " + new Date(window.LAUNCH_TIME).toLocaleString();
 
       function pad(n) {
         return String(n).padStart(2, "0");
       }
 
       function updateCountdown() {
+        const launchTime = new Date(window.LAUNCH_TIME);
         const now = new Date();
         const diff = launchTime - now;
 
