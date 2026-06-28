@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-window.LAUNCH_TIME = "2026-06-28T08:45:00";
-=======
 window.LAUNCH_TIME = "2026-06-28T11:55:00";
->>>>>>> 93f1c07 (time change)
-
 // Mobile Menu Hamburger Toggle
 function initMobileMenu() {
   const hamburgerBtn = document.getElementById('hamburgerBtn');
@@ -122,10 +117,16 @@ document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('.fade-in, .scale-up').forEach(el => observer.observe(el));
 
   const launchTime = new Date(window.LAUNCH_TIME);
-  const path = window.location.pathname.toLowerCase();
-  const isRoot = path === '/' || path === '' || path.endsWith('/');
+const path = window.location.pathname.toLowerCase();
 
-  if (isRoot && new Date() < launchTime) {
-    window.location.replace('countdown.html');
-  }
+const isIndex =
+    path === "/" ||
+    path === "" ||
+    path.endsWith("/") ||
+    path.endsWith("/index.html") ||
+    path === "/index.html";
+
+if (new Date() < launchTime && isIndex) {
+    window.location.replace("countdown.html");
+}
 });
