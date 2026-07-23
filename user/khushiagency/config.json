@@ -1,0 +1,29 @@
+{
+  "businessName": "Khushi Agency",
+  "businessTag": "Mobile Store Accessories & Repairing",
+  "logo": "khushiagency.png",
+  "placeId": "ChIJ6Tse2gYxizkRDAiCS-XNuWg",
+  "googleReviewUrl": "https://search.google.com/local/writereview?placeid=ChIJ6Tse2gYxizkRDAiCS-XNuWg",
+  "contactUrl": "https://wa.me/919693929777",
+  "pageUrl": "../",
+  "contactPageUrl": "contact/",
+  "startDate": "2-6-2026",
+  "expiryDate": "30-7-2026",
+  "address": "Shiv mandir, Main road, Kuru, Jharkhand 835213",
+  "contactNote": "Thanks for visiting Khushi Agency! Connect with us, share your experience, and stay updated with every option below.",
+  "topics": ["Mobile Purchase", "Mobile Accessories"],
+  "selectedTopic": "Mobile Purchase",
+  "languages": ["English", "Hindi"],
+  "selectedLanguage": "English",
+  "noReviewsMessage": {
+    "English": "All reviews have been used! Please connect with admin team to start fresh.",
+    "Hindi": "Sabhi reviews use ho gaye hain! Naye shuruat ke liye admin team se contact karen."
+  },
+  "contactLinks": [
+    { "label": "Call", "icon": "call.png", "url": "tel:+919693929777" },
+    { "label": "WhatsApp", "icon": "whatsapp.png", "url": "https://wa.me/919693929777" },
+    { "label": "Email", "icon": "email.png", "url": "mailto:khushiagency4@gmail.com" },
+    { "label": "Instagram", "icon": "instagram.png", "url": "https://www.instagram.com/khushiagency.official" },
+    { "label": "Review", "icon": "review.png", "url": "../" }
+  ]
+}
