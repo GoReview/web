@@ -1,0 +1,34 @@
+{
+  "businessName": "Archati Future Pvt Ltd",
+  "businessTag": "Educational toys, learning boards, wooden puzzles, and early development games.",
+  "logo": "archatifuture.png",
+  "placeId": "ChIJ44yKBuKHXjkRKNm4nyxiUzU",
+  "googleReviewUrl": "https://search.google.com/local/writereview?placeid=ChIJ44yKBuKHXjkRKNm4nyxiUzU",
+  "contactUrl": "https://wa.me/919898442777",
+  "pageUrl": "../",
+  "contactPageUrl": "contact/",
+  "startDate": "10-8-2026",
+  "expiryDate": "15-8-2026",
+  "address": "Naroda, Ahmedabad, Gujarat 382330",
+  "contactNote": "Thanks for visiting Archati Future Pvt Ltd! Connect with us, share your experience, and stay updated with every option below.",
+  "topics": ["Wooden Puzzles", "Activity Books", "Learning Boards", "Activity Toys", "Die Cast Cars"],
+  "selectedTopic": "Wooden Puzzles",
+  "languages": ["English", "Gujarati", "Hindi"],
+  "selectedLanguage": "English",
+  "noReviewsMessage": {
+    "English": "All reviews have been used! Please connect with admin team to start fresh.",
+    "Gujarati": "Badha reviews use thayi gayu che! Navi shruuat karvani mate admin team ne sampark karo.",
+    "Hindi": "Sabhi reviews use ho gaye hain! Naye shuruat ke liye admin team se contact karen."
+  },
+  "contactLinks": [
+    { "label": "Call", "icon": "call.png", "url": "tel:+919898442777" },
+    { "label": "WhatsApp", "icon": "whatsapp.png", "url": "https://wa.me/919898442777" },
+    { "label": "Email", "icon": "email.png", "url": "mailto:sampark@archati.com" },
+    { "label": "Website", "icon": "website.png", "url": "https://todfod.in" },
+    { "label": "Instagram", "icon": "instagram.png", "url": "https://www.instagram.com/todfod_official_" },
+    { "label": "YouTube", "icon": "youtube.png", "url": "https://www.youtube.com/@Todfod_official" },
+    { "label": "Facebook", "icon": "facebook.png", "url": "https://www.facebook.com/ToDFoDoffical" },
+    { "label": "Location", "icon": "location.png", "url": "https://share.google/AiqbZMkp2TyVkBsAa" },
+    { "label": "Review", "icon": "review.png", "url": "../" }
+  ]
+}
