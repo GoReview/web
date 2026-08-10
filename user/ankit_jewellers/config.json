@@ -1,0 +1,31 @@
+{
+  "businessName": "Ankit Jewellers",
+  "businessTag": "Gold, Silver & Diamond Jewelry store in Ahmedabad, Gujarat",
+  "logo": "ankitjewellers.png",
+  "placeId": "ChIJW0tBBFaGXjkR22X-azpJ7Uw",
+  "googleReviewUrl": "https://search.google.com/local/writereview?placeid=ChIJW0tBBFaGXjkR22X-azpJ7Uw",
+  "contactUrl": "https://wa.me/918980019539",
+  "pageUrl": "../",
+  "contactPageUrl": "contact/",
+  "startDate": "10-8-2026",
+  "expiryDate": "15-8-2026",
+  "address": "Adinath Nagar, Odhav, Ahmedabad, Gujarat-382415",
+  "contactNote": "Thanks for visiting Ankit Jewellers! Connect with us, share your experience, and stay updated with every option below.",
+  "topics": ["Gold Jewelry", "Silver Jewelry", "Diamond Jewelry"],
+  "selectedTopic": "Gold Jewelry",
+  "languages": ["English", "Gujarati", "Hindi"],
+  "selectedLanguage": "English",
+  "noReviewsMessage": {
+    "English": "All reviews have been used! Please connect with admin team to start fresh.",
+    "Gujarati": "Badha reviews use thayi gayu che! Navi shruuat karvani mate admin team ne sampark karo.",
+    "Hindi": "Sabhi reviews use ho gaye hain! Naye shuruat ke liye admin team se contact karen."
+  },
+  "contactLinks": [
+    { "label": "Call", "icon": "call.png", "url": "tel:+918980019539" },
+    { "label": "WhatsApp", "icon": "whatsapp.png", "url": "https://wa.me/918980019539" },
+    { "label": "Instagram", "icon": "instagram.png", "url": "https://www.instagram.com/ankitjewellers.adinathnagar" },
+    { "label": "Facebook", "icon": "facebook.png", "url": "https://www.facebook.com/p/AnkitJewellers-Adinathnagar-Page-61557831908075/" },
+    { "label": "Location", "icon": "location.png", "url": "https://share.google/F8NSz8g9r5QSKlZwl" },
+    { "label": "Review", "icon": "review.png", "url": "../" }
+  ]
+}

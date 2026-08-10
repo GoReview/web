@@ -24,6 +24,7 @@
     { "label": "WhatsApp", "icon": "whatsapp.png", "url": "https://wa.me/919693929777" },
     { "label": "Email", "icon": "email.png", "url": "mailto:khushiagency4@gmail.com" },
     { "label": "Instagram", "icon": "instagram.png", "url": "https://www.instagram.com/khushiagency.official" },
+    { "label": "Location", "icon": "location.png", "url": "https://share.google/wrIPfLvqMBC24BuQd" },
     { "label": "Review", "icon": "review.png", "url": "../" }
   ]
 }

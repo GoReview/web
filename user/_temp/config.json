@@ -29,6 +29,7 @@
     { "label": "LinkedIn", "icon": "linkdin.png", "url": "https://linkedin.com/company/velocityi2" },
     { "label": "YouTube", "icon": "youtube.png", "url": "https://youtube.com/velocityi2" },
     { "label": "Catalog", "icon": "catalog.png", "url": "https://velocityi2.com/catalog" },
+    { "label": "Location", "icon": "location.png", "url": "https://share.google/F8NSz8g9r5QSKlZwl" },
     { "label": "Review", "icon": "review.png", "url": "../" }
   ]
 }
